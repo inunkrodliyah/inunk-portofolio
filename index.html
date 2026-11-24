@@ -1,126 +1,676 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Inunk Rodliyah</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Inunk Rodliyah — Web Developer &amp; Informatics Engineering Student</title>
+  <meta name="description" content="Portfolio of Inunk Rodliyah, a D4 Informatics Engineering student at Universitas Airlangga focused on full-stack web development, UI/UX design, and computer networking.">
+  <meta name="author" content="Inunk Rodliyah">
+  <meta name="theme-color" content="#f6f8fc">
+  <meta property="og:title" content="Inunk Rodliyah — Web Developer &amp; Informatics Engineering Student">
+  <meta property="og:description" content="Clean, human-centered web experiences built at the intersection of code, design, and networks.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/optimized/inunk-hero.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='16'%20fill='%230b1526'/%3E%3Ctext%20x='32'%20y='43'%20font-family='Arial,sans-serif'%20font-size='25'%20font-weight='700'%20fill='%236b9bff'%20text-anchor='middle'%3EIR%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/optimized/inunk-hero.jpg" imagesrcset="assets/optimized/inunk-hero-sm.jpg 600w, assets/optimized/inunk-hero.jpg 1200w" imagesizes="(max-width: 640px) 330px, (max-width: 940px) 390px, 440px">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    document.documentElement.classList.add('js');
+    (function () {
+      try {
+        var saved = localStorage.getItem('inunk-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = saved || (prefersDark ? 'dark' : 'light');
+      } catch (error) {
+        document.documentElement.dataset.theme = 'light';
+      }
+    })();
+  </script>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">Inunk<span>Rodliyah</span></div>
-      <div class="menu-toggle" id="mobile-menu">
-          <i class="fas fa-bars"></i>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Inunk Rodliyah — back to top">
+        <span class="brand-mark" aria-hidden="true">IR</span>
+        <span class="brand-text">
+          <strong>Inunk Rodliyah</strong>
+          <span>Informatics Student &amp; Web Developer</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#journey">Journey</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+          <i class="fa-solid fa-moon theme-icon theme-icon-moon" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun theme-icon theme-icon-sun" aria-hidden="true"></i>
+        </button>
+        <a class="btn btn-primary btn-sm header-cv" href="assets/Inunk_Rodliyah_CV.pdf" download>
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+          <span>Download CV</span>
+        </a>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
       </div>
-      <ul class="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#reflections">Reflections</a></li>
-        <li><a href="#footer">Contact</a></li> </ul>
-    </nav>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav">
+      <nav aria-label="Mobile navigation">
+        <a class="mobile-nav-link" href="#about">About</a>
+        <a class="mobile-nav-link" href="#skills">Skills</a>
+        <a class="mobile-nav-link" href="#projects">Projects</a>
+        <a class="mobile-nav-link" href="#journey">Journey</a>
+        <a class="mobile-nav-link" href="#contact">Contact</a>
+      </nav>
+      <div class="mobile-nav-footer">
+        <a class="btn btn-primary" href="assets/Inunk_Rodliyah_CV.pdf" download>
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+          Download CV
+        </a>
+        <div class="mobile-socials" role="group" aria-label="Social links">
+          <a href="http://www.linkedin.com/in/inunk-rodliyah" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/i.rodliyah_" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://wa.me/6287852020826" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <section id="home" class="hero">
-    <div class="hero-text">
-      <h3>Hello, Welcome 👋</h3>
-      <h1>I'am <span>Inunk Rodliyah</span></h1>
-      <h2>Informatics Engineering Student</h2>
-      <p>"Learning is a never-ending journey"</p>
-      <div class="buttons">
-        <a href="assets/Inunk_Rodliyah_CV.pdf" download class="btn primary">Download CV</a>
-        <a href="#footer" class="btn secondary">Contact Me</a> </div>
-    </div>
-    <div class="hero-img">
-      <img src="assets/inunk2.jpg" alt="Foto Profil Inunk Rodliyah">
-    </div>
-  </section>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="status-pill">
+            <span class="status-dot" aria-hidden="true"></span>
+            Open to internships &amp; entry-level roles
+          </p>
+          <h1>I build clean, <span class="text-accent">human-centered</span> digital experiences.</h1>
+          <p class="hero-lead">
+            I'm <strong>Inunk Rodliyah</strong>, an Informatics Engineering student at Universitas Airlangga.
+            I work across front-end, back-end, and UI/UX — with a growing focus on computer networking.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              Explore my work
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="assets/Inunk_Rodliyah_CV.pdf" download class="btn btn-ghost">
+              <i class="fa-solid fa-download" aria-hidden="true"></i>
+              Download CV
+            </a>
+          </div>
+          <dl class="hero-facts">
+            <div>
+              <dt>GPA</dt>
+              <dd>3.49 / 4.00</dd>
+            </div>
+            <div>
+              <dt>Projects</dt>
+              <dd>8 academic builds</dd>
+            </div>
+            <div>
+              <dt>Based in</dt>
+              <dd>Surabaya, ID</dd>
+            </div>
+          </dl>
+        </div>
 
-  <section id="about" class="about">
-    <div class="about-container">
-      <div class="about-image-column">
-        <img src="assets/inunk.jpg" alt="Foto Inunk Rodliyah">
+        <div class="hero-visual">
+          <div class="portrait-wrap">
+            <div class="portrait-frame">
+              <img src="assets/optimized/inunk-hero.jpg" srcset="assets/optimized/inunk-hero-sm.jpg 600w, assets/optimized/inunk-hero.jpg 1200w" sizes="(max-width: 640px) 330px, (max-width: 940px) 390px, 440px" width="1200" height="1600" alt="Inunk Rodliyah wearing a white outfit and beige hijab, standing in front of a yellow wall" fetchpriority="high" decoding="async">
+            </div>
+            <div class="floating-card floating-card--edu">
+              <span class="floating-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+              <div>
+                <span>Universitas Airlangga</span>
+                <strong>D4 Informatics Engineering</strong>
+              </div>
+            </div>
+            <div class="floating-card floating-card--stack">
+              <span class="floating-icon" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
+              <div>
+                <span>Currently building</span>
+                <strong>Web apps &amp; interfaces</strong>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="about-text-column">
-        <h2>About Me</h2>
-        <p>
-          I'm <strong>Inunk Rodliyah</strong>, an enthusiastic and detail-oriented D4 Informatics Engineering student at Airlangga University (GPA 3.49). I have a strong understanding of front-end and back-end web development, as well as a growing interest in computer networking. Experienced in managing team projects and a quick adapter, I'm eager to apply my technical skills and proactive mindset to make a real contribution.
-        </p>
-        <a href="about.html" class="btn secondary">See More</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- Toolkit marquee -->
+    <section class="toolkit-strip" aria-label="Technical toolkit">
+      <p class="sr-only">Technical toolkit: HTML and CSS, JavaScript, PHP, MySQL, Java, Figma, REST APIs, computer networks, UI/UX design, and Agile workflow.</p>
+      <div class="marquee-track" aria-hidden="true">
+        <span>HTML &amp; CSS</span>
+        <span>JavaScript</span>
+        <span>PHP</span>
+        <span>MySQL</span>
+        <span>Java</span>
+        <span>Figma</span>
+        <span>REST APIs</span>
+        <span>Computer Networks</span>
+        <span>UI/UX Design</span>
+        <span>Agile Workflow</span>
+        <span>HTML &amp; CSS</span>
+        <span>JavaScript</span>
+        <span>PHP</span>
+        <span>MySQL</span>
+        <span>Java</span>
+        <span>Figma</span>
+        <span>REST APIs</span>
+        <span>Computer Networks</span>
+        <span>UI/UX Design</span>
+        <span>Agile Workflow</span>
+      </div>
+    </section>
 
-  <section id="projects" class="projects">
-    <h2>Project</h2>
-    <div class="project-list">
-      <div class="project">
-        <img src="assets/boookstrore.jpg" alt="Proyek 1">
-        <h3>Bookstore Management Website</h3>
-        <p>A web-based bookstore management system for efficient inventory, sales, and stock reporting. This project focuses on robust back-end development and database optimization to ensure fast and secure transactions.</p>
-      </div>
-      <div class="project">
-        <img src="assets/aplikasiresepibu.jpg" alt="Proyek 2">
-        <h3>Mother's Recipe Application</h3>
-        <p>A web/mobile application for managing and sharing recipes, featuring advanced search features, category management, and a rating system. Skills honed in front-end development (UI/UX) and RESTful API integration.</p>
-      </div>
-      <div class="project">
-        <img src="assets/mazesolver.jpg" alt="Proyek 3">
-        <h3>Maze Solver Game</h3>
-        <p>Implementation of an interactive maze game that uses the Breadth-First Search (BFS) algorithm to automatically find the shortest exit path. This project focuses on understanding and applying the concepts of Algorithms and Data Structures in practice.</p>
-      </div>
-      <div class="project">
-        <img src="assets/rekomdasioutfitf.jpg" alt="Proyek 4">
-        <h3>Outfit Recommendation Website</h3>
-        <p>A web-based expert system that recommends outfits based on user input (weather, event, mood). It uses Forward Chaining for intelligent decision-making, demonstrating expertise in basic Artificial Intelligence.</p>
-      </div>
-      <div class="project">
-        <img src="assets/aromaessenceshop.jpg" alt="Proyek 5">
-        <h3>Aroma Essence Shop </h3>
-        <p>A functional e-commerce website for perfume sales, complete with a shopping cart, checkout process, and admin-based product management. Training in payment system implementation, data security, and responsive web design principles.</p>
-      </div>
-      <div class="project">
-        <img src="assets/desain.jpg" alt="Proyek 6">
-        <h3>UI/UX Design</h3>
-        <p>Complete User Interface (UI) and User Experience (UX) design for the Speak Up and Bumi Tangguh applications. This included user flow, wireframing, and final prototyping, with a focus on User-Centered Design and accessibility.</p>
-      </div>
-    </div>
-  </section>
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <div class="about-photo">
+            <img src="assets/optimized/inunk-about.jpg" srcset="assets/optimized/inunk-about-sm.jpg 500w, assets/optimized/inunk-about.jpg 1000w" sizes="(max-width: 640px) 316px, (max-width: 940px) 360px, 430px" width="1000" height="1250" alt="Close portrait of Inunk Rodliyah in front of a yellow wall" loading="lazy" decoding="async">
+          </div>
+          <div class="about-caption">
+            <span class="status-dot" aria-hidden="true"></span>
+            Based in Surabaya, Indonesia
+          </div>
+        </div>
 
- <section id="reflections" class="reflections">
-    <h2>Brief Reflection: University Journey 💡</h2>
-    <p class="reflections-intro">
-        My journey in Informatics Engineering at Airlangga University was an intensive period focused on mastering Full-Stack Development and Computer Networking. My main highlight was successfully leading teams in academic projects that implemented Agile methodologies, teaching me that effective communication is as important as coding skills. The biggest challenge, namely balancing studies, projects, and active roles in student organizations (such as HIMTI), has forced me to develop strong self-discipline, superior time management, and attention to detail—non-technical skills that have now become key assets. This reflection confirms my readiness to bring the spirit of continuous learning and a proactive mindset to the industrial world.
-      </p>
-</section>
+        <div class="about-copy reveal">
+          <p class="eyebrow">01 — About me</p>
+          <h2>Curious by nature, deliberate by practice.</h2>
+          <p>
+            I'm Inunk Rodliyah, a D4 Informatics Engineering student at Universitas Airlangga with a
+            3.49 GPA. My interest sits at the intersection of logic and design — building web applications
+            that are as dependable behind the scenes as they are clear on the surface.
+          </p>
+          <p>
+            I've led academic teams, designed interfaces in Figma, and explored computer networking
+            fundamentals along the way. I care about understanding the problem before writing the first
+            line of code, and I'm always looking for a better way to make an experience feel simple.
+          </p>
 
-  <footer id="footer"> <div class="footer-container">
-      <div class="footer-logo">Inunk<span>Rodliyah</span></div>
-      <p class="footer-tagline">Informatics Engineering Student | Web Enthusiast</p>
-      
-      <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#reflections">Reflections</a>
-        <a href="mailto:iinunk.rodliyah.410767-2023@vokasi.unair.ac.id">Email</a>
+          <ul class="fact-list">
+            <li>
+              <span class="fact-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+              <div><span>Education</span><strong>Universitas Airlangga</strong></div>
+            </li>
+            <li>
+              <span class="fact-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
+              <div><span>Location</span><strong>Surabaya, Indonesia</strong></div>
+            </li>
+            <li>
+              <span class="fact-icon" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span>
+              <div><span>Focus</span><strong>Full-stack Web &amp; UI/UX</strong></div>
+            </li>
+            <li>
+              <span class="fact-icon" aria-hidden="true"><i class="fa-solid fa-star"></i></span>
+              <div><span>Current GPA</span><strong>3.49 / 4.00</strong></div>
+            </li>
+          </ul>
+
+          <a class="text-link" href="about.html">
+            Read my full story
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
+    </section>
 
-      <div class="social-icons">
-        <a href="https://www.facebook.com/share/17Rb6YSzJQ/?mibextid=LQQJ4d" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="http://www.linkedin.com/in/inunk-rodliyah" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.instagram.com/i.rodliyah_?igsh=MmtyemNuejZ1Ynpk&utm_source=qr" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/6287852020826" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <!-- Skills -->
+    <section class="section section--surface" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">02 — Expertise</p>
+            <h2>A practical toolkit, built project by project.</h2>
+          </div>
+          <p class="section-lead">
+            From the first wireframe to the final database query — here's where I'm strong today,
+            and what I'm continuing to deepen.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <span class="skill-icon" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
+            <h3>Frontend Engineering</h3>
+            <p>Clean, responsive interfaces with attention to accessibility, rhythm, and detail.</p>
+            <ul class="tag-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Responsive UI</li>
+              <li>REST integration</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-icon" aria-hidden="true"><i class="fa-solid fa-database"></i></span>
+            <h3>Backend &amp; Data</h3>
+            <p>Structured logic, database design, and data flows that keep products reliable.</p>
+            <ul class="tag-list">
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>Database design</li>
+              <li>CRUD</li>
+              <li>Reporting</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-icon" aria-hidden="true"><i class="fa-solid fa-pen-ruler"></i></span>
+            <h3>UI/UX Design</h3>
+            <p>From user flows to interactive prototypes, grounded in real user needs.</p>
+            <ul class="tag-list">
+              <li>Figma</li>
+              <li>Wireframing</li>
+              <li>Prototyping</li>
+              <li>User-centered design</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-icon" aria-hidden="true"><i class="fa-solid fa-network-wired"></i></span>
+            <h3>Networks &amp; Algorithms</h3>
+            <p>A solid computer science foundation, applied to practical problems.</p>
+            <ul class="tag-list">
+              <li>Computer networks</li>
+              <li>Algorithms</li>
+              <li>BFS</li>
+              <li>Expert systems</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="approach-card reveal">
+          <div>
+            <p class="eyebrow eyebrow--light">How I work</p>
+            <h3>Clear communication. Calm execution. Careful detail.</h3>
+          </div>
+          <ul class="approach-list">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Planning with Agile basics</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Leading collaborative teams</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Breaking down complex problems</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Managing time and priorities</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">03 — Selected work</p>
+            <h2>Projects that turn coursework into something real.</h2>
+          </div>
+          <p class="section-lead">
+            Eight academic builds across web development, intelligent systems, and interface design.
+          </p>
+        </div>
+
+        <div class="filter-bar" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All projects</button>
+          <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web apps</button>
+          <button class="filter-btn" type="button" data-filter="ai" aria-pressed="false">AI &amp; algorithms</button>
+          <button class="filter-btn" type="button" data-filter="design" aria-pressed="false">UI/UX</button>
+        </div>
+        <p class="sr-only" id="project-status" aria-live="polite"></p>
+
+        <div class="projects-grid">
+          <article class="project-card reveal" data-category="web">
+            <div class="project-media">
+              <img src="assets/optimized/project-bookstore.jpg" srcset="assets/optimized/project-bookstore-sm.jpg 800w, assets/optimized/project-bookstore.jpg 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1080px) calc(50vw - 32px), 375px" width="1600" height="830" alt="Admin dashboard of the bookstore management system showing role and menu access screens" loading="lazy" decoding="async">
+              <span class="project-index">01</span>
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">Web Application</p>
+              <h3>Bookstore Management System</h3>
+              <p>A web-based management system for inventory, sales, and stock reporting — with an emphasis on dependable back-end logic, secure transactions, and clear admin workflows.</p>
+              <ul class="tag-list">
+                <li>Backend</li>
+                <li>Database</li>
+                <li>Inventory</li>
+                <li>Reporting</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="web">
+            <div class="project-media">
+              <img src="assets/optimized/project-recipes.jpg" srcset="assets/optimized/project-recipes-sm.jpg 800w, assets/optimized/project-recipes.jpg 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1080px) calc(50vw - 32px), 375px" width="1600" height="900" alt="Recipe app screens showing categories, recipe search, details, and a profile page" loading="lazy" decoding="async">
+              <span class="project-index">02</span>
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">Web &amp; Mobile Application</p>
+              <h3>Mother's Recipe App</h3>
+              <p>A recipe-sharing application with advanced search, category management, and ratings. Focused on a friendly front-end experience and clean RESTful API integration.</p>
+              <ul class="tag-list">
+                <li>Frontend</li>
+                <li>REST API</li>
+                <li>UI/UX</li>
+                <li>Search</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="ai">
+            <div class="project-media">
+              <img src="assets/optimized/project-maze.jpg" srcset="assets/optimized/project-maze-sm.jpg 800w, assets/optimized/project-maze.jpg 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1080px) calc(50vw - 32px), 375px" width="1600" height="900" alt="Maze solver interface with a numbered grid and a visual graph of the shortest path" loading="lazy" decoding="async">
+              <span class="project-index">03</span>
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">Algorithms &amp; Data Structures</p>
+              <h3>Maze Solver Game</h3>
+              <p>An interactive maze game that applies Breadth-First Search to find the shortest exit path, turning core algorithms into a visual, hands-on tool.</p>
+              <ul class="tag-list">
+                <li>Algorithms</li>
+                <li>BFS</li>
+                <li>Data structures</li>
+                <li>Interactive</li>
+              </ul>
+              <a class="project-link" href="https://project-kelompok1-artificial-intelligence.vercel.app/" target="_blank" rel="noopener" aria-label="Open the Maze Solver Game project">
+                View project
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="ai">
+            <div class="project-media">
+              <img src="assets/optimized/project-outfit.jpg" srcset="assets/optimized/project-outfit-sm.jpg 800w, assets/optimized/project-outfit.jpg 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1080px) calc(50vw - 32px), 375px" width="1600" height="900" alt="Outfit recommendation website homepage with a purple hero section and outfit categories" loading="lazy" decoding="async">
+              <span class="project-index">04</span>
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">Artificial Intelligence</p>
+              <h3>Outfit Recommendation System</h3>
+              <p>An expert system that recommends outfits based on weather, event, and mood, using forward chaining for intelligent, context-aware decision-making.</p>
+              <ul class="tag-list">
+                <li>AI</li>
+                <li>Forward chaining</li>
+                <li>Expert system</li>
+                <li>Web</li>
+              </ul>
+              <a class="project-link" href="https://project-kelompok1-artificial-intelligence.vercel.app/" target="_blank" rel="noopener" aria-label="Open the Outfit Recommendation System project">
+                View project
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="web">
+            <div class="project-media">
+              <img src="assets/optimized/project-aroma.jpg" srcset="assets/optimized/project-aroma-sm.jpg 800w, assets/optimized/project-aroma.jpg 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1080px) calc(50vw - 32px), 375px" width="1600" height="900" alt="Aroma Essence e-commerce interface showing product cards, categories, and an article section" loading="lazy" decoding="async">
+              <span class="project-index">05</span>
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">E-Commerce</p>
+              <h3>Aroma Essence Shop</h3>
+              <p>A functional e-commerce site for fragrance products, complete with a shopping cart, checkout flow, and admin-side product management.</p>
+              <ul class="tag-list">
+                <li>E-commerce</li>
+                <li>Cart &amp; checkout</li>
+                <li>Admin panel</li>
+                <li>Responsive</li>
+              </ul>
+              <a class="project-link" href="https://inunkrodliyah.github.io/UAS-Workshop-Desain-UI/" target="_blank" rel="noopener" aria-label="Open the Aroma Essence Shop project">
+                View project
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="design">
+            <div class="project-media">
+              <img src="assets/optimized/project-uiux.jpg" srcset="assets/optimized/project-uiux-sm.jpg 800w, assets/optimized/project-uiux.jpg 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1080px) calc(50vw - 32px), 375px" width="1600" height="900" alt="Collage of UI screens from the Speak Up and Bumi Tangguh application designs" loading="lazy" decoding="async">
+              <span class="project-index">06</span>
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">UI/UX Design</p>
+              <h3>Speak Up &amp; Bumi Tangguh</h3>
+              <p>End-to-end interface design for two applications — user flows, wireframes, and high-fidelity prototypes built around user-centered design and accessibility.</p>
+              <ul class="tag-list">
+                <li>Figma</li>
+                <li>User flows</li>
+                <li>Prototyping</li>
+                <li>Accessibility</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="ai">
+            <div class="project-media">
+              <img src="assets/optimized/project-chatbot.jpg" srcset="assets/optimized/project-chatbot-sm.jpg 800w, assets/optimized/project-chatbot.jpg 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1080px) calc(50vw - 32px), 375px" width="1600" height="1000" alt="TanyaUnair chatbot interface with a sidebar of campus services and a welcome message in the chat window" loading="lazy" decoding="async">
+              <span class="project-index">07</span>
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">Artificial Intelligence</p>
+              <h3>TanyaUnair Chatbot</h3>
+              <p>An AI-powered academic assistant for Universitas Airlangga — answering questions about KRS, scholarships, admissions, and campus services, with a live search fallback to official UNAIR pages.</p>
+              <ul class="tag-list">
+                <li>AI chatbot</li>
+                <li>NLP</li>
+                <li>Web app</li>
+                <li>UNAIR</li>
+              </ul>
+              <a class="project-link" href="https://chat-bot-eta-sooty.vercel.app/" target="_blank" rel="noopener" aria-label="Open the TanyaUnair Chatbot project">
+                View project
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="web">
+            <div class="project-media">
+              <img src="assets/optimized/project-presensi.jpg" srcset="assets/optimized/project-presensi-sm.jpg 800w, assets/optimized/project-presensi.jpg 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1080px) calc(50vw - 32px), 375px" width="1600" height="1000" alt="QR attendance system welcome screen with lecturer and student access modes" loading="lazy" decoding="async">
+              <span class="project-index">08</span>
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">Web Application</p>
+              <h3>QR Attendance System</h3>
+              <p>A smart attendance system built around dynamic QR codes — lecturers generate time-limited tokens while students check in in real time, with live attendance tracking and class dashboards.</p>
+              <ul class="tag-list">
+                <li>QR code</li>
+                <li>Real-time</li>
+                <li>Dashboard</li>
+                <li>Cloud</li>
+              </ul>
+              <a class="project-link" href="https://presensi-qr-kelompok4.vercel.app/" target="_blank" rel="noopener" aria-label="Open the QR Attendance System project">
+                View project
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Journey -->
+    <section class="section section--surface" id="journey">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">04 — Journey</p>
+            <h2>Education, leadership, and the lessons in between.</h2>
+          </div>
+          <p class="section-lead">
+            A timeline of the experiences shaping how I think, collaborate, and build.
+          </p>
+        </div>
+
+        <div class="journey-grid">
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <p class="timeline-date">2023 — Present</p>
+              <h3>D4 Informatics Engineering</h3>
+              <p class="timeline-org">Universitas Airlangga · GPA 3.49 / 4.00</p>
+              <p>Building a foundation in web programming, interface design, algorithms, and computer networks while applying every concept through hands-on projects.</p>
+            </article>
+
+            <article class="timeline-item reveal">
+              <p class="timeline-date">Academic projects</p>
+              <h3>Project Manager</h3>
+              <p class="timeline-org">Cross-functional student teams</p>
+              <p>Led project planning, task distribution, and team communication using Agile basics — turning open-ended briefs into delivered prototypes and reports.</p>
+            </article>
+
+            <article class="timeline-item reveal">
+              <p class="timeline-date">Student organization</p>
+              <h3>Active Member, HIMTI</h3>
+              <p class="timeline-org">Informatics Engineering student association</p>
+              <p>Collaborated on campus initiatives while balancing coursework and team projects, strengthening communication, coordination, and time management.</p>
+            </article>
+
+            <article class="timeline-item reveal">
+              <p class="timeline-date">Beyond the classroom</p>
+              <h3>Continuous Learner</h3>
+              <p class="timeline-org">Self-directed exploration</p>
+              <p>Deepening practical knowledge in computer networking and UI/UX through independent study, experimentation, and feedback.</p>
+            </article>
+          </div>
+
+          <div class="journey-aside">
+            <div class="quote-card reveal">
+              <i class="fa-solid fa-quote-left quote-mark" aria-hidden="true"></i>
+              <blockquote>Effective communication matters as much as clean code.</blockquote>
+              <p>Balancing studies, projects, and organizational responsibilities taught me that discipline, time management, and attention to detail are just as important as technical skill.</p>
+            </div>
+
+            <div class="values-card reveal">
+              <h3>What guides my work</h3>
+              <ul class="value-list">
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  <div><strong>Clarity</strong><span>Understand the problem before building.</span></div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  <div><strong>Ownership</strong><span>See projects through, from idea to delivery.</span></div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  <div><strong>Curiosity</strong><span>Keep learning across disciplines.</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-copy">
+            <p class="eyebrow eyebrow--light">05 — Contact</p>
+            <h2>Have a role, project, or idea in mind?</h2>
+            <p>I'm open to internships, entry-level opportunities, and collaborative work in web development, UI/UX, or networking. I'd be glad to hear from you.</p>
+            <div class="contact-actions">
+              <a href="mailto:iinunk.rodliyah.410767-2023@vokasi.unair.ac.id" class="btn btn-light">
+                Send an email
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+              <button class="btn btn-outline-light" id="copy-email" type="button" data-email="iinunk.rodliyah.410767-2023@vokasi.unair.ac.id">
+                <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                <span>Copy email</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="contact-details">
+            <div class="contact-row">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <div>
+                <span>Email</span>
+                <a href="mailto:iinunk.rodliyah.410767-2023@vokasi.unair.ac.id">iinunk.rodliyah.410767-2023@vokasi.unair.ac.id</a>
+              </div>
+            </div>
+            <div class="contact-row">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <div>
+                <span>Location</span>
+                <strong>Surabaya, Indonesia</strong>
+              </div>
+            </div>
+            <div class="contact-row">
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+              <div>
+                <span>Availability</span>
+                <strong>Open to on-site, hybrid &amp; remote</strong>
+              </div>
+            </div>
+            <div class="contact-socials">
+              <a href="http://www.linkedin.com/in/inunk-rodliyah" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+              <a href="https://wa.me/6287852020826" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/i.rodliyah_" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="brand brand--footer" aria-label="Inunk Rodliyah — back to top">
+            <span class="brand-mark" aria-hidden="true">IR</span>
+            <span class="brand-text">
+              <strong>Inunk Rodliyah</strong>
+              <span>Informatics Student &amp; Web Developer</span>
+            </span>
+          </a>
+          <p>Informatics Engineering student and web developer based in Surabaya, Indonesia.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#journey">Journey</a>
+          <a href="about.html">Full profile</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 Inunk Rodliyah. All rights reserved.</p>
+        <p>&copy; <span data-year>2026</span> Inunk Rodliyah. All rights reserved.</p>
+        <div class="footer-socials" role="group" aria-label="Social links">
+          <a href="http://www.linkedin.com/in/inunk-rodliyah" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/i.rodliyah_" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://wa.me/6287852020826" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/share/17Rb6YSzJQ/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
 
   <script src="script.js"></script>
 </body>

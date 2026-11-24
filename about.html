@@ -1,126 +1,356 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Inunk Rodliyah</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Inunk Rodliyah</title>
+  <meta name="description" content="A closer look at Inunk Rodliyah's background, education, interests, and career goals in informatics engineering, web development, and networking.">
+  <meta name="author" content="Inunk Rodliyah">
+  <meta name="theme-color" content="#f6f8fc">
+  <meta property="og:title" content="About — Inunk Rodliyah">
+  <meta property="og:description" content="Background, education, interests, and goals of Inunk Rodliyah — Informatics Engineering student and web developer.">
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="assets/optimized/inunk-hero.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='16'%20fill='%230b1526'/%3E%3Ctext%20x='32'%20y='43'%20font-family='Arial,sans-serif'%20font-size='25'%20font-weight='700'%20fill='%236b9bff'%20text-anchor='middle'%3EIR%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    document.documentElement.classList.add('js');
+    (function () {
+      try {
+        var saved = localStorage.getItem('inunk-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = saved || (prefersDark ? 'dark' : 'light');
+      } catch (error) {
+        document.documentElement.dataset.theme = 'light';
+      }
+    })();
+  </script>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Inunk<span>Rodliyah</span></div>
-            <div class="menu-toggle" id="mobile-menu-about">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="index.html#resume">Resume</a></li>
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="index.html#reflections">Reflections</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <main class="about-page">
-        <div class="content-wrapper">
-            <h2>Getting to Know Inunk Rodliyah Better</h2>
-            <div class="profile-image-container">
-                <img src="assets/inunk.jpg" alt="Inunk Rodliyah Profile" class="about-profile-img">
-            </div>
-            <section id="biography" class="about-section">
-                <h3>Short Biography</h3>
-                <p class="bio-text">
-                    Hello! I'm Inunk Rodliyah, a passionate and detail-oriented student in the D4 Informatics Engineering program at Airlangga University, with a current GPA of 3.49/4.00. I have a strong understanding of web development, both front-end and back-end.
-                </p>
-                <p class="bio-text">
-                    I am also very interested in Computer Networking and am actively developing my fundamental knowledge in this field. I have experience in managing team projects, adapt quickly to dynamic environments, and have proven leadership skills as a Project Manager in academic assignments. I am a communicative, flexible, and skilled time-management individual, able to work effectively both independently and in a team.
-                </p>
-            </section>
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Inunk Rodliyah — home">
+        <span class="brand-mark" aria-hidden="true">IR</span>
+        <span class="brand-text">
+          <strong>Inunk Rodliyah</strong>
+          <span>Informatics Student &amp; Web Developer</span>
+        </span>
+      </a>
 
-            <div class="two-column-layout">
-                <section id="majors-interests" class="about-section">
-                    <h3>Majors and Interests</h3>
-                    <ul>
-                        <li>Major: Diploma 4 Informatics Engineering, Airlangga University.</li>
-                        <li>Relevant Courses: Web Programming, User Interface Design, Algorithms & Programming, Computer Networks (Basic).</li>
-                        <li>Main Interests: Web Development (Front-end & Back-end), Computer Networking.</li>
-                        <li>Other Skills: UI/UX Design (Basic Figma), Project Management (Agile Basics).</li>
-                    </ul>
-                </section>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link is-active" href="about.html" aria-current="page">About</a></li>
+          <li><a class="nav-link" href="index.html#skills">Skills</a></li>
+          <li><a class="nav-link" href="index.html#projects">Projects</a></li>
+          <li><a class="nav-link" href="index.html#journey">Journey</a></li>
+          <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-                <section id="goals" class="about-section">
-                    <h3>Career Goals</h3>
-                    <p class="goal-text">
-                        I'm excited to apply my technical skills and proactive mindset to make a real contribution in a role as an IT Programmer or Network Professional. My short-term goal is to gain in-depth, practical experience in the industry. Long-term, I aspire to become a competent and recognized IT professional, continually learning and innovating at the intersection of web development and computer networking.
-                    </p>
-                </section>
-            </div>
-            
-            <section id="media-links" class="about-section media-links-section">
-                <h3>My Media & Network</h3>
-                <div class="media-container">
-                    <a href="https://vt.tiktok.com/ZSU6VQ7rX/" target="_blank" class="btn primary media-link-btn">
-                        <i class="fas fa-video"></i> Watch the Self Introduction Video
-                    </a>
-                    <a href="http://www.linkedin.com/in/inunk-rodliyah" target="_blank" class="btn secondary media-link-btn">
-                        <i class="fab fa-linkedin"></i> Visit My LinkedIn
-                    </a>
-                </div>
-            </section>
-
-            <section id="photos-collages" class="about-section">
-                <h3>Photo Gallery & Collage</h3>
-                
-                <div class="photo-gallery">
-                    <img src="assets/6.jpg" alt="Foto Kegiatan 1" class="gallery-img">
-                    <img src="assets/8.jpg" alt="Foto Kolase" class="gallery-img">
-                    <img src="assets/7.jpg" alt="Foto Profesional" class="gallery-img">
-                    <img src="assets/9.jpg" alt="Foto Kegiatan 1" class="gallery-img">
-                    <img src="assets/2.jpg" alt="Foto Kolase" class="gallery-img">
-                    <img src="assets/12.jpg" alt="Foto Profesional" class="gallery-img">
-                    <img src="assets/10.jpg" alt="Foto Kegiatan 1" class="gallery-img">
-                    <img src="assets/3.jpg" alt="Foto Kolase" class="gallery-img">
-                    <img src="assets/1.jpg" alt="Foto Profesional" class="gallery-img">
-                    <img src="assets/5.jpg" alt="Foto Kolase" class="gallery-img">
-                    <img src="assets/4.jpg" alt="Foto Profesional" class="gallery-img">
-                    <img src="assets/11.jpg" alt="Foto Profesional" class="gallery-img">
-                </div>
-            </section>
-            
-            <hr>
-            <div class="back-button-container">
-                <a href="index.html" class="btn secondary">Return to Home Page</a>
-            </div>
-        </div>
-    </main>
-
-<footer id="footer"> <div class="footer-container">
-      <div class="footer-logo">Inunk<span>Rodliyah</span></div>
-      <p class="footer-tagline">Informatics Engineering Student | Web Enthusiast</p>
-      
-      <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#reflections">Reflections</a>
-        <a href="mailto:iinunk.rodliyah.410767-2023@vokasi.unair.ac.id">Email</a>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+          <i class="fa-solid fa-moon theme-icon theme-icon-moon" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun theme-icon theme-icon-sun" aria-hidden="true"></i>
+        </button>
+        <a class="btn btn-primary btn-sm header-cv" href="assets/Inunk_Rodliyah_CV.pdf" download>
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+          <span>Download CV</span>
+        </a>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
       </div>
+    </div>
 
-      <div class="social-icons">
-        <a href="https://www.facebook.com/share/17Rb6YSzJQ/?mibextid=LQQJ4d" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="http://www.linkedin.com/in/inunk-rodliyah" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.instagram.com/i.rodliyah_?igsh=MmtyemNuejZ1Ynpk&utm_source=qr" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/6287852020826" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <div class="mobile-nav" id="mobile-nav">
+      <nav aria-label="Mobile navigation">
+        <a class="mobile-nav-link is-active" href="about.html" aria-current="page">About</a>
+        <a class="mobile-nav-link" href="index.html#skills">Skills</a>
+        <a class="mobile-nav-link" href="index.html#projects">Projects</a>
+        <a class="mobile-nav-link" href="index.html#journey">Journey</a>
+        <a class="mobile-nav-link" href="index.html#contact">Contact</a>
+      </nav>
+      <div class="mobile-nav-footer">
+        <a class="btn btn-primary" href="assets/Inunk_Rodliyah_CV.pdf" download>
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+          Download CV
+        </a>
+        <div class="mobile-socials" role="group" aria-label="Social links">
+          <a href="http://www.linkedin.com/in/inunk-rodliyah" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/i.rodliyah_" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://wa.me/6287852020826" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">About</p>
+        <h1>A closer look at my journey, interests, and goals.</h1>
+        <p class="page-lead">
+          I'm an Informatics Engineering student who enjoys turning complex ideas into clear,
+          useful digital experiences. Here's a little more about the path that brought me here.
+        </p>
+      </div>
+    </section>
+
+    <div class="section section--profile">
+      <div class="container profile-grid">
+        <aside class="profile-card reveal">
+          <img src="assets/optimized/inunk-about.jpg" srcset="assets/optimized/inunk-about-sm.jpg 500w, assets/optimized/inunk-about.jpg 1000w" sizes="(max-width: 940px) 420px, 310px" width="1000" height="1250" alt="Close portrait of Inunk Rodliyah wearing glasses and a beige hijab" loading="lazy" decoding="async">
+          <div class="profile-meta">
+            <strong>Inunk Rodliyah</strong>
+            <span>D4 Informatics Engineering</span>
+            <span>Universitas Airlangga · GPA 3.49</span>
+            <ul class="profile-links">
+              <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:iinunk.rodliyah.410767-2023@vokasi.unair.ac.id">Email me</a></li>
+              <li><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><a href="http://www.linkedin.com/in/inunk-rodliyah" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Surabaya, Indonesia</span></li>
+            </ul>
+            <a class="btn btn-primary btn-full" href="assets/Inunk_Rodliyah_CV.pdf" download>
+              <i class="fa-solid fa-download" aria-hidden="true"></i>
+              Download CV
+            </a>
+          </div>
+        </aside>
+
+        <div class="profile-content">
+          <section class="reveal">
+            <p class="eyebrow">Biography</p>
+            <h2>Getting to know me</h2>
+            <p>
+              Hello! I'm Inunk Rodliyah, a detail-oriented student in the D4 Informatics Engineering
+              program at Airlangga University, with a current GPA of 3.49/4.00. I have a strong
+              understanding of web development across both front-end and back-end.
+            </p>
+            <p>
+              I'm also deeply interested in computer networking and am actively developing my
+              foundational knowledge in the field. I have experience managing team projects, adapt
+              quickly to dynamic environments, and have proven leadership skills as a project manager
+              in academic assignments. I communicate well, stay flexible, and manage my time carefully —
+              working effectively both independently and within a team.
+            </p>
+          </section>
+
+          <section class="reveal">
+            <p class="eyebrow">Education</p>
+            <h2>Academic background</h2>
+            <div class="info-card">
+              <span class="info-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+              <div>
+                <strong>Universitas Airlangga</strong>
+                <p class="info-role">Diploma 4 (D4) Informatics Engineering</p>
+                <div class="meta-chips">
+                  <span>2023 — Present</span>
+                  <span>GPA 3.49 / 4.00</span>
+                  <span>Surabaya, Indonesia</span>
+                </div>
+                <p class="info-note">
+                  Relevant coursework: Web Programming, User Interface Design, Algorithms &amp;
+                  Programming, and Computer Networks.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <div class="split-grid">
+            <section class="mini-card reveal">
+              <p class="eyebrow">Interests</p>
+              <h2>Where I focus</h2>
+              <ul class="tag-list tag-list--stack">
+                <li>Full-stack web development</li>
+                <li>UI/UX design</li>
+                <li>Computer networking</li>
+                <li>Algorithms &amp; data structures</li>
+                <li>Agile project management</li>
+              </ul>
+            </section>
+
+            <section class="mini-card reveal">
+              <p class="eyebrow">Goals</p>
+              <h2>Where I'm headed</h2>
+              <p>
+                I'm excited to apply my technical skills and proactive mindset as an IT programmer or
+                network professional. In the short term, I want to gain hands-on industry experience.
+                Long term, I aspire to grow into a well-rounded IT professional who keeps learning and
+                innovating at the intersection of web development and networking.
+              </p>
+            </section>
+          </div>
+
+          <section class="reflection-card reveal">
+            <p class="eyebrow eyebrow--light">Reflection</p>
+            <h2>What the journey has taught me</h2>
+            <p>
+              My time in Informatics Engineering at Airlangga University has been an intensive period
+              focused on full-stack development and computer networking. A highlight was leading teams
+              in academic projects that applied Agile methodologies — which taught me that effective
+              communication matters as much as coding. The biggest challenge, balancing studies,
+              projects, and active roles in student organizations such as HIMTI, pushed me to build
+              stronger self-discipline, time management, and attention to detail. These are now key
+              assets I bring to the table. This reflection confirms my readiness to bring a spirit of
+              continuous learning and a proactive mindset into the professional world.
+            </p>
+          </section>
+
+          <section class="reveal">
+            <p class="eyebrow">Media &amp; network</p>
+            <h2>See me in action</h2>
+            <p>Watch my self-introduction video or connect with me professionally.</p>
+            <div class="media-actions">
+              <a href="https://vt.tiktok.com/ZSU6VQ7rX/" target="_blank" rel="noopener" class="btn btn-primary">
+                <i class="fa-solid fa-circle-play" aria-hidden="true"></i>
+                Watch introduction video
+              </a>
+              <a href="http://www.linkedin.com/in/inunk-rodliyah" target="_blank" rel="noopener" class="btn btn-ghost">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                Visit my LinkedIn
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <section class="section section--surface">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Beyond the classroom</p>
+            <h2>Moments from the journey.</h2>
+          </div>
+          <p class="section-lead">
+            A few snapshots from campus life, activities, and the people I've learned alongside.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <button class="gallery-item reveal" type="button" data-full="assets/optimized/gallery-6.jpg" aria-label="View photo 1 in a larger view">
+            <img src="assets/optimized/gallery-6-sm.jpg" srcset="assets/optimized/gallery-6-sm.jpg 500w, assets/optimized/gallery-6.jpg 1000w" sizes="(max-width: 640px) 45vw, (max-width: 780px) 30vw, 275px" alt="Moment from Inunk's university journey" loading="lazy" decoding="async">
+            <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-full="assets/optimized/gallery-8.jpg" aria-label="View photo 2 in a larger view">
+            <img src="assets/optimized/gallery-8-sm.jpg" srcset="assets/optimized/gallery-8-sm.jpg 500w, assets/optimized/gallery-8.jpg 1000w" sizes="(max-width: 640px) 45vw, (max-width: 780px) 30vw, 275px" alt="Moment from Inunk's university journey" loading="lazy" decoding="async">
+            <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-full="assets/optimized/gallery-7.jpg" aria-label="View photo 3 in a larger view">
+            <img src="assets/optimized/gallery-7-sm.jpg" srcset="assets/optimized/gallery-7-sm.jpg 500w, assets/optimized/gallery-7.jpg 1000w" sizes="(max-width: 640px) 45vw, (max-width: 780px) 30vw, 275px" alt="Moment from Inunk's university journey" loading="lazy" decoding="async">
+            <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-full="assets/optimized/gallery-9.jpg" aria-label="View photo 4 in a larger view">
+            <img src="assets/optimized/gallery-9-sm.jpg" srcset="assets/optimized/gallery-9-sm.jpg 500w, assets/optimized/gallery-9.jpg 1000w" sizes="(max-width: 640px) 45vw, (max-width: 780px) 30vw, 275px" alt="Moment from Inunk's university journey" loading="lazy" decoding="async">
+            <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-full="assets/optimized/gallery-2.jpg" aria-label="View photo 5 in a larger view">
+            <img src="assets/optimized/gallery-2-sm.jpg" srcset="assets/optimized/gallery-2-sm.jpg 500w, assets/optimized/gallery-2.jpg 1000w" sizes="(max-width: 640px) 45vw, (max-width: 780px) 30vw, 275px" alt="Moment from Inunk's university journey" loading="lazy" decoding="async">
+            <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-full="assets/optimized/gallery-12.jpg" aria-label="View photo 6 in a larger view">
+            <img src="assets/optimized/gallery-12-sm.jpg" srcset="assets/optimized/gallery-12-sm.jpg 500w, assets/optimized/gallery-12.jpg 1000w" sizes="(max-width: 640px) 45vw, (max-width: 780px) 30vw, 275px" alt="Moment from Inunk's university journey" loading="lazy" decoding="async">
+            <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-full="assets/optimized/gallery-10.jpg" aria-label="View photo 7 in a larger view">
+            <img src="assets/optimized/gallery-10-sm.jpg" srcset="assets/optimized/gallery-10-sm.jpg 500w, assets/optimized/gallery-10.jpg 1000w" sizes="(max-width: 640px) 45vw, (max-width: 780px) 30vw, 275px" alt="Moment from Inunk's university journey" loading="lazy" decoding="async">
+            <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-full="assets/optimized/gallery-3.jpg" aria-label="View photo 8 in a larger view">
+            <img src="assets/optimized/gallery-3-sm.jpg" srcset="assets/optimized/gallery-3-sm.jpg 500w, assets/optimized/gallery-3.jpg 1000w" sizes="(max-width: 640px) 45vw, (max-width: 780px) 30vw, 275px" alt="Moment from Inunk's university journey" loading="lazy" decoding="async">
+            <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-full="assets/optimized/gallery-1.jpg" aria-label="View photo 9 in a larger view">
+            <img src="assets/optimized/gallery-1-sm.jpg" srcset="assets/optimized/gallery-1-sm.jpg 500w, assets/optimized/gallery-1.jpg 1000w" sizes="(max-width: 640px) 45vw, (max-width: 780px) 30vw, 275px" alt="Moment from Inunk's university journey" loading="lazy" decoding="async">
+            <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-full="assets/optimized/gallery-5.jpg" aria-label="View photo 10 in a larger view">
+            <img src="assets/optimized/gallery-5-sm.jpg" srcset="assets/optimized/gallery-5-sm.jpg 500w, assets/optimized/gallery-5.jpg 1000w" sizes="(max-width: 640px) 45vw, (max-width: 780px) 30vw, 275px" alt="Moment from Inunk's university journey" loading="lazy" decoding="async">
+            <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-full="assets/optimized/gallery-4.jpg" aria-label="View photo 11 in a larger view">
+            <img src="assets/optimized/gallery-4-sm.jpg" srcset="assets/optimized/gallery-4-sm.jpg 500w, assets/optimized/gallery-4.jpg 1000w" sizes="(max-width: 640px) 45vw, (max-width: 780px) 30vw, 275px" alt="Moment from Inunk's university journey" loading="lazy" decoding="async">
+            <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-full="assets/optimized/gallery-11.jpg" aria-label="View photo 12 in a larger view">
+            <img src="assets/optimized/gallery-11-sm.jpg" srcset="assets/optimized/gallery-11-sm.jpg 500w, assets/optimized/gallery-11.jpg 1000w" sizes="(max-width: 640px) 45vw, (max-width: 780px) 30vw, 275px" alt="Moment from Inunk's university journey" loading="lazy" decoding="async">
+            <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+        </div>
+
+        <div class="back-home">
+          <a href="index.html" class="text-link">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            Back to home
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand brand--footer" aria-label="Inunk Rodliyah — home">
+            <span class="brand-mark" aria-hidden="true">IR</span>
+            <span class="brand-text">
+              <strong>Inunk Rodliyah</strong>
+              <span>Informatics Student &amp; Web Developer</span>
+            </span>
+          </a>
+          <p>Informatics Engineering student and web developer based in Surabaya, Indonesia.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#journey">Journey</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 Inunk Rodliyah. All rights reserved.</p>
+        <p>&copy; <span data-year>2026</span> Inunk Rodliyah. All rights reserved.</p>
+        <div class="footer-socials" role="group" aria-label="Social links">
+          <a href="http://www.linkedin.com/in/inunk-rodliyah" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/i.rodliyah_" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://wa.me/6287852020826" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/share/17Rb6YSzJQ/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" type="button" aria-label="Close photo viewer">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <img id="lightbox-img" src="assets/optimized/gallery-6.jpg" alt="">
+      <div class="lightbox-bar">
+        <button class="lightbox-nav" type="button" data-lightbox-prev aria-label="Previous photo">
+          <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <span id="lightbox-counter">1 / 12</span>
+        <button class="lightbox-nav" type="button" data-lightbox-next aria-label="Next photo">
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
 </body>
 </html>
